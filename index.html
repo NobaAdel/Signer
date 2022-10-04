@@ -1,0 +1,390 @@
+<html>
+
+<head>
+    <base href="/Signer/" />
+    <link rel="stylesheet" href="Content/css/tabler.min.css">
+    <link rel="stylesheet" href="Content/css/demo.min.css">
+    <link rel="stylesheet" href="Content/css/codemirror.css" />
+    <link rel="stylesheet" href="Content/css/dracula.css" />
+    <link rel="stylesheet" href="Content/css/simplescrollbars.css" />
+    <script src="Content/js/codemirror.js"></script>
+    <script src="Content/js/javascript.js"></script>
+    <script src="Content/js/simplescrollbars.js"></script>
+    <style>
+        .CodeMirror-wrap pre {
+            word-break: break-word;
+        }
+    </style>
+    <title>Signer Demtra Online</title>
+    <link rel="icon" type="image/x-icon" href="Content/imgs/favicon.ico">
+    <meta property='og:title' content='Signer Demtra Online' />
+    <meta property='og:image' content='Content/imgs/favicon.ico' />
+    <meta property='og:description' content='Sign and send documents for egyption tax authourtiy online' />
+    <meta property='og:url' content='https://nobaadel.github.io/Signer/' />
+    <meta property='og:image:width' content='128' />
+    <meta property='og:image:height' content='128' />
+    <meta property="og:type" content='website' />
+</head>
+
+<body>
+    <div class="page">
+        <!-- Navbar -->
+        <header class="navbar navbar-expand-md navbar-light sticky-top d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href=".">
+                        <img src="Content/imgs/mylogo.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    </a>
+                </h1>
+
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Sign">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Signing Steps
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Send">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Send Documents
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#SHA256">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-signature" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M3 17c3.333 -3.333 5 -6 5 -8c0 -3 -1 -3 -2 -3s-2.032 1.085 -2 3c.034 2.048 1.658 4.877 2.5 6c1.5 2 2.5 2.5 3.5 1l2 -3c.333 2.667 1.333 4 3 4c.53 0 2.639 -2 3 -2c.517 0 1.517 .667 3 2"></path>
+                                        </svg>
+                                    </span>
+
+                                    <span class="nav-link-title">
+                                        SHA256
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Download">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                                            <polyline points="7 11 12 16 17 11"></polyline>
+                                            <line x1="12" y1="4" x2="12" y2="16"></line>
+                                        </svg>
+                                    </span>
+
+                                    <span class="nav-link-title">
+                                        Download Host
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#About">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-qrcode" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                                            <line x1="7" y1="17" x2="7" y2="17.01"></line>
+                                            <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                                            <line x1="7" y1="7" x2="7" y2="7.01"></line>
+                                            <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                                            <line x1="17" y1="7" x2="17" y2="7.01"></line>
+                                            <line x1="14" y1="14" x2="17" y2="14"></line>
+                                            <line x1="20" y1="14" x2="20" y2="14.01"></line>
+                                            <line x1="14" y1="14" x2="14" y2="17"></line>
+                                            <line x1="14" y1="20" x2="17" y2="20"></line>
+                                            <line x1="17" y1="17" x2="20" y2="17"></line>
+                                            <line x1="20" y1="17" x2="20" y2="20"></line>
+                                        </svg>
+                                    </span>
+
+                                    <span class="nav-link-title">
+                                        About
+                                    </span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-wrapper">
+            <div class="row">
+
+                <div class="alert alert-important alert-info alert-dismissible  text-center" " role="alert" id="Sign">
+
+                    <p>This website does not share or store any of your data.</p>
+
+
+                </div>
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h2 class="page-title">
+                                All signing Steps
+                            </h2>
+                            <div class="row row-cards mt-2">
+                                <div class="col-lg-4 col-sm-6">
+                                    <div class="my-3">
+
+                                        <select id="tokens" class="form-select">
+                                            <option value="">No Tokens Found...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6">
+                                    <div class="my-3">
+                                        <button id="getCerts" class="btn btn-bitbucket w-50">Load Tokens</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-6">
+                                    <div class="my-3">
+                                        <input type="password" id="tokenPin" class="form-control" placeholder="Token Pin">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6">
+                                    <div class="my-3">
+                                        <button id="gobtn" class="btn btn-bitbucket w-50">Sign</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Original Document
+                                        </div>
+                                        <div class="card-body">
+
+                                            <textarea name="" id="odeditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Canonical Json
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea name="" id="cjeditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Signature String
+                                        </div>
+                                        <div class="card-body">
+
+                                            <textarea name="" id="sseditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Output Document Structure
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea name="" id="sdeditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Send"></div>
+
+                <div class="col-12 mt-5">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h2 class="page-title">
+                                Send Documents
+                            </h2>
+                            <div class="row row-cards mt-2">
+                                <div class="col-lg-4">
+                                    <div class="my-3">
+                                        <input type="password" id="clientId" class="form-control" placeholder="Client Id">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="my-3">
+                                        <input type="password" id="clientSecret" class="form-control" placeholder="Client Secret">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="my-3">
+                                        <button id="sendbtn" class="btn btn-bitbucket w-50">Send</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Documents
+                                        </div>
+                                        <div class="card-body">
+
+                                            <textarea name="" id="dtseditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Response
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea name="" id="reseditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="SHA256"></div>
+
+                <div class="col-12 mt-5">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h2 class="page-title">
+                                Hashing (SHA256)
+                            </h2>
+                            <div class="row row-cards mt-2">
+
+                                <div class="col-lg-6">
+                                    <div class="my-3">
+                                        <button id="hashbtn" class="btn btn-bitbucket w-50">Hash</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            String To Hash
+                                        </div>
+                                        <div class="card-body">
+
+                                            <textarea id="stheditor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            SHA256 Hash
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea name="" id="sha256editor"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Download"></div>
+            <section class="section  my-5">
+                <div class="container text-center">
+                    <h2 class="section-title mb-2">Ready to download?</h2>
+                    <p class="section-description">
+                        Start your adventure with Signer Demtra and sign and send your documents online. For free!
+                    </p>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-green" target="_blank">Download</a>
+                        <a href="#" class="btn btn-secondary ml-2">See demo</a>
+                    </div>
+                </div>
+            </section>
+            <div id="About"></div>
+            <section class="section bg-light">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header"> <h3 class="h3">About</h3></div>
+                        <div class="row container my-3 text-center">
+                            <div class="col-md-8">
+                                <h4 class="h3"> Developed by Joseph Adel &#38;&#38; Abanob Adel.</h4>
+                                <h5 class="h5">
+                                    MS Dynamics 365 F&O /AX - Technical Consultants | .Net Developers.
+                                </h5>
+
+                                <p class="m-0 text-muted">This website developed to sign and send json documents online for free to Egyptian tax authority.</p>
+                            </div>
+                            <div class="col-md-4 markdown">
+                                <h1>Contact</h1>
+
+                                <strong>
+                                    Mobiles : <br>
+                                </strong><a href="tel:+201220534362">+201220534362</a><br>
+                                <a href="tel:+201206704097">+201206704097</a> <br>
+
+
+                                <strong>
+                                    E-mails :  <br>
+                                </strong><a href="mailto:eng.joseph.developer@gmail.com">eng.joseph.developer@gmail.com</a><br>
+                                <a href="mailto:abanob.adel.fakhry@gmail.com">abanob.adel.fakhry@gmail.com</a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+        </div>
+    </div>
+    <script src="Content/js/jquery.min.js"></script>
+    <script src="Content/js/tabler.min.js"></script>
+    <script src="Content/js/demo.min.js"></script>
+    <script src="Content/js/main.js"></script>
+
+
+
+</body>
+
+</html>
